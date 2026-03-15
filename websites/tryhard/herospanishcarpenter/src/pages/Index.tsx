@@ -1,0 +1,42 @@
+import TopBar from "@/components/TopBar";
+import NavBar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import ResidentialSection from "@/components/ResidentialSection";
+import ServicesSection from "@/components/ServicesSection";
+import ReviewsSection from "@/components/ReviewsSection";
+import GallerySection from "@/components/GallerySection";
+import AboutSection from "@/components/AboutSection";
+import ServiceAreasSection from "@/components/ServiceAreasSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+import logoPlaceholder from "@/assets/logo-placeholder.svg";
+
+const Index = () => {
+  return (
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
+      {/* Logo - spans both TopBar and NavBar, hidden on mobile */}
+      <div className="hidden lg:block absolute left-[49px] top-[8px] z-30">
+        <img src={logoPlaceholder} alt="Company Logo" className="w-[296px] h-auto" />
+      </div>
+
+      {/* Mobile logo */}
+      <div className="lg:hidden flex justify-center py-2 bg-background">
+        <img src={logoPlaceholder} alt="Company Logo" className="w-[140px] h-auto" />
+      </div>
+
+      <TopBar />
+      <NavBar />
+      <HeroSection />
+      <ResidentialSection />
+      <ServicesSection />
+      <ReviewsSection />
+      <GallerySection />
+      <AboutSection />
+      <ServiceAreasSection />
+      <CTASection />
+      <Footer />
+    </div>
+  );
+};
+
+export default Index;
