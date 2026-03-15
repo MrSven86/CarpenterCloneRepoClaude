@@ -29,14 +29,23 @@ When the user says "make it [style]", clone the patterns from that style's refer
 | **Plain Solid** | `websites/plain-solid/` | keen-craft-framework | Clean, minimal, trust-focused, testimonials with photos, CTA-driven |
 | **Trash** | `websites/trash/` | braddouglas, project-placeholder, chameleonpainting, exactly-as-ordered | Reference for what NOT to do — study these to understand common mistakes |
 
+## Output Format
+
+**Always output a single-file React artifact (.jsx).** This renders as a live clickable preview directly in the chat that the user can view, interact with, and share with clients.
+
+- Build the ENTIRE website as one React component in a single artifact
+- Use Tailwind CSS for all styling (available in artifacts)
+- Reference all icons and badges via raw GitHub URLs:
+  `https://raw.githubusercontent.com/MrSven86/CarpenterCloneRepoClaude/main/assets/icons/quality/high-quality.svg`
+- The artifact IS the deliverable — it should look like a finished website when clicked
+
 ## How to Build
 
 1. User gives you: company name, phone, email, location, services, style preference
 2. You study the reference site(s) for that style — read their components, layouts, CSS, structure
-3. You build using React/Vite/Tailwind (same stack as all reference sites)
-4. All images referenced via raw GitHub URLs from the assets repo:
-   `https://raw.githubusercontent.com/MrSven86/CarpenterCloneRepoClaude/main/assets/icons/quality/high-quality.svg`
-5. Push to GitHub — Lovable auto-generates a preview link you can send to the client for approval
+3. You build the full site as a single React artifact with all sections
+4. All icons/badges/images load from the GitHub assets repo — never invent your own
+5. User clicks the artifact to preview, then we push to GitHub for a Lovable preview link if approved
 
 ## Asset Library Quick Reference
 
