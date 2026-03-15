@@ -36,7 +36,7 @@ When the user says "make it [style]", clone the patterns from that style's refer
 3. You build using React/Vite/Tailwind (same stack as all reference sites)
 4. All images referenced via raw GitHub URLs from the assets repo:
    `https://raw.githubusercontent.com/MrSven86/CarpenterCloneRepoClaude/main/assets/icons/quality/high-quality.svg`
-5. Push to the client's GitHub repo so Lovable can deploy
+5. Push to GitHub — Lovable auto-generates a preview link you can send to the client for approval
 
 ## Asset Library Quick Reference
 
