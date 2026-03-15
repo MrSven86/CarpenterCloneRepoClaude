@@ -1,0 +1,123 @@
+/* Self-hosted Switzer font */
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Switzer-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Switzer-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Switzer-Semibold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Switzer-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Switzer';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/Switzer-Extrabold.woff') format('woff');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background 1 - Cream Beige */
+    --background: 37 93% 94%;
+    /* Almost black - soft charcoal */
+    --foreground: 220 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 15%;
+
+    /* Primary - Teal/Cyan CTA */
+    --primary: 188 93% 37%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary/Contrast - Warm Brown-Orange */
+    --secondary: 32 95% 44%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Background 2 - Sky Blue */
+    --muted: 199 89% 94%;
+    --muted-foreground: 220 10% 35%;
+
+    --accent: 32 95% 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 37 30% 85%;
+    --input: 37 30% 85%;
+    --ring: 188 93% 37%;
+
+    --radius: 0.5rem;
+
+    /* Tertiary - Deep Brown */
+    --slate-dark: 25 84% 27%;
+
+    /* Section backgrounds */
+    --section-dark: 25 84% 20%;
+    --section-light: 37 93% 94%;
+
+    --check: 188 93% 37%;
+
+    --sidebar-background: 37 93% 94%;
+    --sidebar-foreground: 25 84% 27%;
+    --sidebar-primary: 25 84% 27%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 199 89% 94%;
+    --sidebar-accent-foreground: 25 84% 27%;
+    --sidebar-border: 37 30% 85%;
+    --sidebar-ring: 188 93% 37%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Switzer', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .section-dark {
+    background-color: hsl(var(--section-dark));
+  }
+
+  .section-light {
+    background-color: hsl(var(--section-light));
+  }
+}
