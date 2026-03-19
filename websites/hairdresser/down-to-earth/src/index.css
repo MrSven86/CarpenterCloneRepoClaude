@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Open+Sans:wght@300;400;500;600;700&family=Roboto+Flex:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 171 53% 67%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 171 53% 67%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 85%;
+    --ring: 171 53% 67%;
+
+    --radius: 0.5rem;
+
+    --salon-dark: 0 0% 15%;
+    --salon-text: 0 0% 30%;
+    --salon-light: 0 0% 96%;
+    --salon-teal: 171 53% 67%;
+    --salon-teal-light: 171 53% 85%;
+    --salon-orange: 20 90% 50%;
+    --salon-footer-bg: 0 0% 13%;
+
+    --font-heading: 'Libre Bodoni', 'Georgia', serif;
+    --font-body: 'Open Sans', 'Segoe UI', sans-serif;
+    --font-mono: 'Roboto Flex', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-bold uppercase text-sm tracking-wide rounded-full px-10 py-4 transition-opacity hover:opacity-90;
+    font-family: var(--font-body);
+  }
+  .btn-outline-primary {
+    @apply border-2 border-primary text-primary font-bold uppercase text-sm tracking-wide rounded-full px-8 py-4 transition-all hover:bg-primary hover:text-primary-foreground;
+    font-family: var(--font-body);
+  }
+  .section-padding {
+    @apply px-4 md:px-16 lg:px-[260px];
+  }
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-normal leading-tight;
+    font-family: var(--font-heading);
+    color: hsl(var(--salon-dark));
+  }
+  .heading-lg {
+    @apply text-2xl md:text-3xl font-normal leading-10;
+    font-family: var(--font-heading);
+    color: hsl(var(--salon-dark));
+  }
+  .body-text {
+    @apply text-base leading-7;
+    color: hsl(var(--salon-text));
+    font-family: var(--font-body);
+  }
+  .review-card {
+    @apply bg-[hsl(var(--salon-teal-light))] rounded-tr-3xl rounded-bl-3xl shadow-sm p-8 min-w-[280px] max-w-[300px] flex-shrink-0;
+  }
+}
